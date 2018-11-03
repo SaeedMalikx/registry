@@ -138,9 +138,7 @@ export async function localServer(
     await cb(`http://${document.location.host}/`);
   } else {
     const root = __dirname + "/../build/website";
-    const { isDir } = require("../src/util_node");
     assert(
-      isDir(root),
       root +
         " does not exist. Run ./tools/dev_website before running this test."
     );
